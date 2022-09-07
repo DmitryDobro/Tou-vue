@@ -1,0 +1,125 @@
+.company{
+    position: relative;
+    padding-top: 100px;
+     &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 234, 47, 1);
+        }
+}
+.company-conteiner{
+    display: flex;
+    align-items: center;
+}
+.company-link {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+         & .router-link-active{
+            background: rgba(206, 0, 2, 1);
+        }
+    a{
+        display: block;
+        background: rgba(0, 0, 0, 1);
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        cursor: pointer;
+     
+    }
+    p{
+
+    }
+}
+.company-link_content{
+    display: flex;
+}
+.company-body {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.company-column{
+    flex: 1 1 50%;
+}
+.company-title {
+}
+
+.company-text {
+    font-size: 24px;
+    line-height: 30px;
+    p{
+        margin-bottom: 40px;
+    }
+}
+.company-colum {
+}
+.company-items {
+    padding: 0 0 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.company-item {
+    position: relative;
+    flex: 0 0 50%;
+    margin-bottom: 100px;
+    z-index: 30;
+}
+
+.company-item_img {
+    position: relative;
+    display: inline-block;
+    img{
+      position: relative;
+      z-index: 100;
+      background: rgba(232, 217, 53, 1);
+      padding: 15px;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        background: rgba(242, 227, 58, 1);
+        width: 100%;
+        height: 100%;
+        top: -10px;
+        left: 30px;
+    }
+}
+.company-item_title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 55px;
+}
+.company-item_text {
+    font-size: 24px;
+    line-height: 30px;
+    color: #646464;
+}
+.card-row.mobile{
+    display: none;
+    @media(max-width: 758px){
+        margin-bottom: 100px;
+    }
+}
+
+@media(max-width: 1025px){
+    .company-body{
+        flex-direction: column;
+         width: 100%;
+    }
+.company{
+        &::before{
+            width: 90%;
+            height: 73%;
+        }
+}
+.company-conteiner{
+    display: flex;
+    flex-direction: column;
+}
+}

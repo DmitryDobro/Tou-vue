@@ -1,0 +1,46 @@
+.test{
+    position: relative;
+  }
+  .company{
+    position: relative;
+      padding: 200px 0px;
+       &::before{
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 60%;
+              height: 100%;
+              background: rgba(255, 234, 47, 1);
+          }
+  }
+  .company-conteiner{
+      display: flex;
+      align-items: center;
+      width: 100%;
+  }
+  .company-body {
+      width: 100%;
+  }
+  
+  .company-link {
+      margin-left: 50px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+          & .router-link-active{
+              background: rgba(206, 0, 2, 1);
+          }
+      a{
+          display: block;
+          background: rgba(0, 0, 0, 1);
+          width: 16px;
+          height: 16px;
+          margin-right: 10px;
+          cursor: pointer;
+  
+      }
+  }
+  .company-link_content{
+      display: flex;
+  }

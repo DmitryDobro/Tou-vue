@@ -1,0 +1,47 @@
+.gamesProjest-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.games-cover{
+padding: 100px 0 0 0;
+display: flex;
+flex-direction: column;
+}
+.games-conteiner{
+ padding: 100px 0;
+display: flex;
+justify-content: space-between;
+@media(max-width: 758px){
+    flex-direction: column;
+}
+}
+.cover{
+padding: 10px 0px;
+width: 100%;
+align-items: center;
+&:nth-child(even){
+    flex-direction: row-reverse;
+}
+}
+
+.games-link {
+display: inline-flex;
+flex-direction: column;
+position: relative;
+margin: 20% 0 0 10px;
+     & .router-link-active{
+        background: rgba(206, 0, 2, 1);
+    }
+a{
+    display: block;
+    background: rgba(0, 0, 0, 1);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+}
+.games-link_content{
+display: flex;  
+}

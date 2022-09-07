@@ -1,0 +1,82 @@
+// тк мы к ним обращаемся везде ниже
+@use 'utils/fonts.scss';
+@import 'utils/vars';
+@import 'utils/reset';
+
+
+
+html {
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+$maxWidth:1600;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMpbSize: $addSize + $addSize * 0.7;
+  @media (max-width:767px){
+      font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+  @media (min-width:767px){
+      font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+}
+
+
+
+body {
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  background-color: #f7f7f7;
+  &.active{
+    overflow: hidden;
+  }
+}
+
+.app{
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.conteiner {
+ padding: 0 15px;
+ max-width: 1600px;
+ margin: 0 auto;
+ @media(max-width: 769px){
+  padding: 0 20px;
+ }
+ @media(max-width: 570px){
+  padding: 0 5px;
+ }
+}
+
+._bigTitle {
+  @include adaptiv-font(72,32 );
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+
+
+@import './styles/styles.scss';
+@import './common/_common';
+// @import './helpers/_helpers';

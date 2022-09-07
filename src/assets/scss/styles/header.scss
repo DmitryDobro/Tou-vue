@@ -1,0 +1,17 @@
+.header{
+    position: relative;
+    z-index: 20;
+    padding: 20px 0;
+}
+.header-li{
+        font-size: 20px;
+        line-height: 25px;
+        color: #000;
+        &:hover{
+            color: rgba(255, 0, 0, 1);
+        }
+        &.router-link-active{
+            color: rgba(166, 0, 2, 1);
+        }
+    
+}
